@@ -1,0 +1,275 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+main{
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file_front{
+    z-index: 3;
+    
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    width: 200px;
+    height: auto;
+
+    transform-origin: center bottom;
+}
+
+.file_back{
+    z-index: 1;
+    
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 200px;
+    height: auto;
+
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.4))
+}
+
+
+
+
+
+
+
+
+
+
+.file{
+    transition:
+        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.file_group:hover .file_front{
+    transform: translate(-50%, -40%) scale(1.1);
+}
+
+.file_group:hover .file_back{
+    transform: translate(-50%, -50%) scale(1.1);
+}
+/* 大きくなるアニメーション */
+
+
+
+
+
+.file_group:hover .file_front{
+    transform:
+        translate(-50%, -32%)
+        scale(1.1)
+        rotateX(25deg);
+}
+/* 開くアニメーション */
+
+
+
+
+
+
+.work_card{
+    z-index: 2;
+
+    width: 100px;
+    height: 150px;
+
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    position: absolute;
+
+    top: 60%;
+    left: 50%;
+
+    opacity: 1;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.45s,
+        filter 0.3s;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(0deg)
+        scale(0);
+}
+
+
+
+.work_card img{
+    width: 100%;
+    height: 80%;
+    border-radius: 12px;
+    display: block;
+
+    object-fit: cover;
+}
+
+.work_card p{
+    text-align: center;
+    font-size: 20%;
+    margin: 10%;
+}
+
+
+
+
+.file_group:hover .work1{
+    transform:
+        translate(-210%, -140%)
+        rotate(-40deg)
+        scale(1);
+
+    opacity: 1;
+}
+
+.file_group:hover .work2{
+    transform:
+        translate(-130%, -170%)
+        rotate(-20deg)
+        scale(1);
+
+    opacity: 1;
+}
+
+.file_group:hover .work3{
+    transform:
+        translate(-50%, -185%)
+        rotate(0deg)
+        scale(1);
+
+    opacity: 1;
+}
+
+.file_group:hover .work4{
+    transform:
+        translate(30%, -170%)
+        rotate(20deg)
+        scale(1);
+
+    opacity: 1;
+}
+
+.file_group:hover .work5{
+    transform:
+        translate(110%, -140%)
+        rotate(40deg)
+        scale(1);
+
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+.works:hover .work_card{
+    filter: brightness(0.7);
+}
+
+.works .work_card:hover{
+    filter: brightness(1);
+
+    z-index: 10;
+}
+
+.file_group:hover .work1:hover{
+    transform:
+        translate(-240%, -145%)
+        rotate(-48deg)
+        scale(1.15);
+
+    z-index: 10;
+}
+
+.file_group:hover .work2:hover{
+    transform:
+        translate(-150%, -180%)
+        rotate(-26deg)
+        scale(1.15);
+
+    z-index: 10;
+}
+
+.file_group:hover .work3:hover{
+    transform:
+        translate(-50%, -200%)
+        rotate(0deg)
+        scale(1.18);
+
+    z-index: 10;
+}
+
+.file_group:hover .work4:hover{
+    transform:
+        translate(50%, -180%)
+        rotate(26deg)
+        scale(1.15);
+
+    z-index: 10;
+}
+
+.file_group:hover .work5:hover{
+    transform:
+        translate(140%, -145%)
+        rotate(48deg)
+        scale(1.15);
+
+    z-index: 10;
+}
+
+
+
+
+
+
+
+.file_group{
+    position: relative;
+
+    width: 700px;
+    height: 500px;
+}
+
+
+
+
+
+
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.file_front,
+.file_back,
+.work_card{
+    pointer-events: auto;
+}
+
+
+
